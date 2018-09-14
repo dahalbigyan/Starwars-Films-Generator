@@ -15,25 +15,22 @@ const MovieList = (props)=>{
     };
 
     return(
-        <table className="table table-striped">
+        <table className="table table-striped table-dark">
             <tbody>
                 {
                     ( props.loading===false && props.loaded===true) 
-                    ? 
-                    <tr>
+                    ? <tr>
                         <th>Title</th>
                         <th>Release Date</th>
                     </tr>
-                    :
-                    <tr style={{display: "none"}}>
-                    <th></th>
-                    <th></th>
+                    : <tr style={{display: "none"}}>
+                        <th></th>
+                        <th></th>
                     </tr>
                     
                 }
             { movieItems }
             </tbody>
-            
         </table>
     );
 };

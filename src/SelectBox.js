@@ -24,16 +24,14 @@ const data = {
   
   const options = []; 
   data.characters.forEach((item=>{
-    let character = {
-  
-    }; 
+    const character = {}; 
     character.value=item.name; 
     character.label=item.name;
     character.url=item.url;
     options.push(character);
   }));
 
-class SelectBar extends Component {
+class SelectBox extends Component {
   constructor(props) {
     super(props);
     this.state={
@@ -41,13 +39,13 @@ class SelectBar extends Component {
       }
   }; 
 
-  render() {
-    return (
+  render(){
+    return(
       <div>
         <Select
-            value={this.state.selectedOption}
-            onChange={this.handleChange}
-            options={options}
+          value={this.state.selectedOption}
+          onChange={this.handleChange}
+          options={options}
         />
       </div>
     );
@@ -58,4 +56,4 @@ class SelectBar extends Component {
   };
 }
 
-export default SelectBar;
+export default SelectBox;
